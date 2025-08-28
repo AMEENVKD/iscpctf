@@ -113,7 +113,7 @@ def main():
             data_json = row['data_json']
             redacted_json, is_pii = detector.process_record(record_id, data_json)
             
-            # ✅ only write rows where is_pii is True
+            
             if is_pii:
                 writer.writerow({
                     'record_id': record_id,
